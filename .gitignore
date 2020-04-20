@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# vim, emacs
+*~
+
+# Xcode
+xcuserdata/
+project.xcworkspace/
+build/

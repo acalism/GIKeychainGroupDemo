@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GIKeychainDemo/GIKeychainDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GIKeychainDemo2/GIKeychainDemo2.xcodeproj">
+   </FileRef>
+</Workspace>
