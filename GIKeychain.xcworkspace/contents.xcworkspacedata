@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GIKeychain/GIKeychain.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GIKeychainDemo/GIKeychainDemo.xcodeproj">
    </FileRef>
    <FileRef

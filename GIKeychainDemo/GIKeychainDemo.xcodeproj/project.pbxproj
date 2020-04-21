@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F4575D244EFCEF00CE8F7E /* GIKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4575C244EFCEF00CE8F7E /* GIKeychain.framework */; };
+		43F4575E244EFCEF00CE8F7E /* GIKeychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4575C244EFCEF00CE8F7E /* GIKeychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		642B473D1C2B83550090642F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B473C1C2B83550090642F /* main.m */; };
 		642B47401C2B83550090642F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B473F1C2B83550090642F /* AppDelegate.m */; };
 		642B47431C2B83550090642F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B47421C2B83550090642F /* ViewController.m */; };
@@ -15,7 +17,6 @@
 		642B474B1C2B83550090642F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642B47491C2B83550090642F /* LaunchScreen.storyboard */; };
 		642B47561C2B83550090642F /* GIKeychainDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B47551C2B83550090642F /* GIKeychainDemoTests.m */; };
 		642B47611C2B83550090642F /* GIKeychainDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B47601C2B83550090642F /* GIKeychainDemoUITests.m */; };
-		642B47711C2B83850090642F /* GIKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 642B47701C2B83850090642F /* GIKeychain.m */; };
 		642B47731C2B84320090642F /* KeychainAccessGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 642B47721C2B84320090642F /* KeychainAccessGroups.plist */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		43F4575F244EFCEF00CE8F7E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43F4575E244EFCEF00CE8F7E /* GIKeychain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		43F4575C244EFCEF00CE8F7E /* GIKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GIKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B47381C2B83550090642F /* GIKeychainDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIKeychainDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B473C1C2B83550090642F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		642B473E1C2B83550090642F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +69,6 @@
 		642B475C1C2B83550090642F /* GIKeychainDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIKeychainDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B47601C2B83550090642F /* GIKeychainDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIKeychainDemoUITests.m; sourceTree = "<group>"; };
 		642B47621C2B83550090642F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		642B476F1C2B83850090642F /* GIKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeychain.h; sourceTree = "<group>"; };
-		642B47701C2B83850090642F /* GIKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeychain.m; sourceTree = "<group>"; };
 		642B47721C2B84320090642F /* KeychainAccessGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeychainAccessGroups.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F4575D244EFCEF00CE8F7E /* GIKeychain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43F4575B244EFCEF00CE8F7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43F4575C244EFCEF00CE8F7E /* GIKeychain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		642B472F1C2B83550090642F = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +113,7 @@
 				642B47541C2B83550090642F /* GIKeychainDemoTests */,
 				642B475F1C2B83550090642F /* GIKeychainDemoUITests */,
 				642B47391C2B83550090642F /* Products */,
+				43F4575B244EFCEF00CE8F7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,7 +130,6 @@
 		642B473A1C2B83550090642F /* GIKeychainDemo */ = {
 			isa = PBXGroup;
 			children = (
-				642B476E1C2B83730090642F /* GIKeychain */,
 				642B473E1C2B83550090642F /* AppDelegate.h */,
 				642B473F1C2B83550090642F /* AppDelegate.m */,
 				642B47411C2B83550090642F /* ViewController.h */,
@@ -147,15 +170,6 @@
 			path = GIKeychainDemoUITests;
 			sourceTree = "<group>";
 		};
-		642B476E1C2B83730090642F /* GIKeychain */ = {
-			isa = PBXGroup;
-			children = (
-				642B476F1C2B83850090642F /* GIKeychain.h */,
-				642B47701C2B83850090642F /* GIKeychain.m */,
-			);
-			name = GIKeychain;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +180,7 @@
 				642B47341C2B83550090642F /* Sources */,
 				642B47351C2B83550090642F /* Frameworks */,
 				642B47361C2B83550090642F /* Resources */,
+				43F4575F244EFCEF00CE8F7E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,7 +305,6 @@
 				642B47431C2B83550090642F /* ViewController.m in Sources */,
 				642B47401C2B83550090642F /* AppDelegate.m in Sources */,
 				642B473D1C2B83550090642F /* main.m in Sources */,
-				642B47711C2B83850090642F /* GIKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

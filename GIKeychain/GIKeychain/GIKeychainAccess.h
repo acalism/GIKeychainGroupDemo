@@ -1,5 +1,5 @@
 //
-//  GIKeychain.h
+//  GIKeychainAccess.h
 //  GIKeychainDemo
 //
 //  Created by shen on 15/12/24.
@@ -10,7 +10,9 @@
 
 #define accessGroupItem @"XXXXX.GrassInfoAppFamily"
 
-@interface GIKeychain : NSObject
+NS_ASSUME_NONNULL_BEGIN
+
+@interface GIKeychainAccess : NSObject
 
 + (id)getKeychainDataForKey:(NSString *)key;
 + (void)addKeychainData:(id)data forKey:(NSString *)key;
@@ -18,3 +20,5 @@
 + (void)addShareKeyChainData:(id)data forKey:(NSString *)key;
 
 @end
+
+NS_ASSUME_NONNULL_END
