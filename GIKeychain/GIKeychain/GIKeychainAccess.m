@@ -12,6 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation GIKeychainAccess
 
+static NSString * s_appGroupName = nil;
++ (NSString *)appGroupName {
+    return s_appGroupName;
+}
++ (void)setAppGroupName:(NSString *)groupName {
+    s_appGroupName = groupName;
+}
+
+
 //创建一个基本的查询字典
 + (NSMutableDictionary *)keychainQueryFor:(NSString *)service {
     return @{
@@ -57,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)addShareKeyChainData:(id)data forKey:(NSString *)key {
     //Get search dictionary
     NSMutableDictionary *keychainQuery = [self keychainQueryFor:key];
-    keychainQuery[(id) kSecAttrAccessGroup] = accessGroupItem;
+    keychainQuery[(id) kSecAttrAccessGroup] = self.appGroupName;
     //Delete old item before add new item
     SecItemDelete((__bridge CFDictionaryRef)keychainQuery);
     //Add new object to search dictionary(Attention:the data format)

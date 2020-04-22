@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-#define accessGroupItem @"XXXXX.GrassInfoAppFamily"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GIKeychainAccess : NSObject
 
-+ (id)getKeychainDataForKey:(NSString *)key;
-+ (void)addKeychainData:(id)data forKey:(NSString *)key;
-+ (void)deleteKeychainDataForKey:(NSString *)key;
-+ (void)addShareKeyChainData:(id)data forKey:(NSString *)key;
++ (nullable id)dataForKey:(NSString *)key;
++ (void)setData:(nullable id)data forKey:(NSString *)key;
+
+/// "XXXXX.GrassInfoAppFamily"
+@property(class, nonatomic, copy) NSString *appGroupName;
++ (void)setSharedData:(nullable id)data forKey:(NSString *)key;
++ (nullable id)sharedDataForKey:(NSString *)key;
 
 @end
 
